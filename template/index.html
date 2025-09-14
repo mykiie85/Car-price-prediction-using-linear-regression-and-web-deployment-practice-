@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car price prediction</title>
+</head>
+<body>
+    <h1>Mike car price prediction</h1>
+    <form action="predict" method="post">
+        <input name="km" type="number" placeholder="Enter the km" 
+        min="1000" max="1000000" required>
+        <span>km</span>
+        <br>
+        <input name="age" type="number" placeholder="Enter the age"
+        min="0" max="100" required>
+        <span>years</span>
+        <br>
+        <input name="op" type="number" placeholder="Enter Original price" 
+        min="10000" max="10000000" required>
+        <span>₹</span>
+        <br>
+        <select name="fuel_type">
+            <option value="select">Select fuel type</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="CNG">CNG</option>
+        </select>
+        <br>
+        <select name="transmission">
+            <option value="select">Select transmission</option>
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+        </select>
+        <br>
+        <button>Predict Price</button>
+        <br>
+        <span style="color: blue;">{{ prediction_text }}</span>
+
+    </form>
+    
+</body>
+</html>
