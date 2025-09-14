@@ -1,0 +1,1 @@
+simple practice of trying to deploy a car price prediction model in a web site
