@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template,request
 import numpy as np
 import pickle
@@ -44,4 +45,5 @@ def predict_price():
 
 # run the app
 if __name__ == '__main__':   
-    app.run(debug=True)
+    # Debug mode (Werkzeug debugger) is opt-in only: set FLASK_DEBUG=1 for local development
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")
